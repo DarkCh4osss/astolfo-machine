@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Card from './Card';
-import Logout from './Logout';
 import styled from 'styled-components';
 //import { db } from '../Firebase';
 import { Simboli } from '../Simboli';
+import Nav from './Nav';
 
 const Slot = () => {
     let [index1, setIndex1] = useState(-1);
@@ -33,6 +33,7 @@ const Slot = () => {
   return (
     <>  
       <SlotMachine>
+        <Nav />
         <Card index={index1}/>
         <Card index={index2}/>
         <Card index={index3}/>
@@ -42,8 +43,6 @@ const Slot = () => {
               setIndex2(Math.floor(Math.random() * Simboli.length));
               setIndex3(Math.floor(Math.random() * Simboli.length));
         }}>Tira la leva.</Genera> 
-
-        <Logout />
       </SlotMachine>
     </>  
   );

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components';
 import { Simboli } from '../Simboli';
 import { getRequest } from './GetRequest';
@@ -9,14 +9,23 @@ interface Props {
 
 const Card = ({index}: Props) => {
 
-    let emoji: Promise<string> = getRequest();
-    console.log(emoji)
+    const [emoji, setEmoji] = useState(null);
+    const [emoji1, setEmoji1] = useState(null);
+    const [emoji2, setEmoji2] = useState(null);
+    
+    useEffect(() => {
+        getRequest().then((result: any) => setEmoji(result));
+        getRequest().then((result: any) => setEmoji1(result));
+        getRequest().then((result: any) => setEmoji2(result));
+    }, [])
+
+    console.log(emoji, emoji1, emoji2)
 
     if(index === -1) {
         return (
             <>
                 <CardStyle>
-                    <h1>emoji</h1>
+                    
                     <h1 className="emoji">❌❌❌</h1>
                     <h1>TIRA LA LEVA PER COMINCIARE.</h1>
                 </CardStyle>

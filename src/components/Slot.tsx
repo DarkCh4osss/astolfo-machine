@@ -7,8 +7,6 @@ import Nav from './Nav';
 
 const Slot = () => {
     let [index1, setIndex1] = useState(-1);
-    let [index2, setIndex2] = useState(-1);
-    let [index3, setIndex3] = useState(-1);
 
     /*let [data, setData] = useState([]);
 
@@ -35,13 +33,9 @@ const Slot = () => {
       <SlotMachine>
         <Nav />
         <Card index={index1}/>
-        <Card index={index2}/>
-        <Card index={index3}/>
 
         <Genera onClick={() => {
               setIndex1(Math.floor(Math.random() * Simboli.length));
-              setIndex2(Math.floor(Math.random() * Simboli.length));
-              setIndex3(Math.floor(Math.random() * Simboli.length));
         }}>Tira la leva.</Genera> 
       </SlotMachine>
     </>  
@@ -49,6 +43,7 @@ const Slot = () => {
 }
 
 const SlotMachine = styled.div`
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -57,6 +52,7 @@ const SlotMachine = styled.div`
 `
 
 const Genera = styled.button`
+  margin-top: 10rem;
   padding: 2rem 5rem;
   background: pink;
   border: transparent;

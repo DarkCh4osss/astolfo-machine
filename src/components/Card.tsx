@@ -1,17 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components';
 import { Simboli } from '../Simboli';
+import { getRequest } from './GetRequest';
 
 interface Props {
     index: number,
 }
 
 const Card = ({index}: Props) => {
-    
+
+    let emoji: Promise<string> = getRequest();
+    console.log(emoji)
+
     if(index === -1) {
         return (
             <>
                 <CardStyle>
+                    <h1>emoji</h1>
                     <h1 className="emoji">❌❌❌</h1>
                     <h1>TIRA LA LEVA PER COMINCIARE.</h1>
                 </CardStyle>

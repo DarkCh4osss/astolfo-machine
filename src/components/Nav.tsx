@@ -20,7 +20,7 @@ const Nav = () => {
                     <NavBar>
                         <Container animate={{x: '-100%'}}>
                             <NavLinks>
-                                <h3  onClick={() => auth.signOut()}>Logout</h3>
+                                <h3 className="logoud-txt" onClick={() => auth.signOut()}>Logout</h3>
                                 <h5>Giocatore Corrente:</h5>
                                 <LogoutInfo className="info-player">
                                     <Avatar src={user?.photoURL as any}  alt="user avatar"/>
@@ -42,7 +42,14 @@ const Nav = () => {
                     <NavBar>
                         <Container animate={{x: '100%'}}>
                             <NavLinks>
-                                <h3>Logout</h3>
+                                <h3  className="logoud-txt" onClick={() => auth.signOut()}>Logout</h3>
+                                <h5>Giocatore Corrente:</h5>
+                                <LogoutInfo className="info-player">
+                                    <Avatar src={user?.photoURL as any}  alt="user avatar"/>
+                                    <div className="testo">
+                                        <h6>{user?.displayName}</h6>
+                                    </div>
+                                </LogoutInfo>
                             </NavLinks>
                         </Container>               
                     </NavBar> 

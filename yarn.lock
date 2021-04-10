@@ -9499,6 +9499,11 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
+mojilist@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mojilist/-/mojilist-1.0.0.tgz#7fbda9c7c829088d7ac608b73784398a41f1b7f9"
+  integrity sha1-f72px8gpCI16xgi3N4Q5ikHxt/k=
+
 morgan@^1.10.0, morgan@^1.8.2:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.10.0.tgz#091778abc1fc47cd3509824653dae1faab6b17d7"
@@ -11193,6 +11198,11 @@ printj@~1.1.0:
   resolved "https://registry.yarnpkg.com/printj/-/printj-1.1.2.tgz#d90deb2975a8b9f600fb3a1c94e3f4c53c78a222"
   integrity sha512-zA2SmoLaxZyArQTOPj5LXecR+RagfPSU5Kw1qP+jkWeNlrq+eJZyY2oS68SU1Z/7/myXM4lo9716laOFAVStCQ==
 
+prng-well1024a@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prng-well1024a/-/prng-well1024a-1.0.1.tgz#05e8ed923e4ea2b3f78af5ee94f056b4d5cfab24"
+  integrity sha1-Bejtkj5OorP3ivXulPBWtNXPqyQ=
+
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
@@ -11437,6 +11447,14 @@ raf@^3.4.1:
   dependencies:
     performance-now "^2.1.0"
 
+randmoji@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/randmoji/-/randmoji-1.1.0.tgz#4e173e84530bd4ee060ede6c96cc3f9e1d885aab"
+  integrity sha1-Thc+hFML1O4GDt5slsw/nh2IWqs=
+  dependencies:
+    mojilist "^1.0.0"
+    randy "^1.5.1"
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -11451,6 +11469,13 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+randy@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/randy/-/randy-1.5.1.tgz#e7dc086a0ecb8bef7d67356642cd2a33f962465c"
+  integrity sha1-59wIag7Li+99ZzVmQs0qM/liRlw=
+  dependencies:
+    prng-well1024a "~1.0.0"
 
 range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"

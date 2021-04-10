@@ -4,3 +4,7 @@
     box-sizing: border-box;
     background-color: #d2dbdd;
 }
+
+body {
+    overflow: hidden;
+}

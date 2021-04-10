@@ -1,42 +1,31 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components';
-import { Simboli } from '../Simboli';
-import { getRequest } from './GetRequest';
+import { Simboli1, Simboli2, Simboli3 } from '../Simboli';
+import moji from 'randmoji';
 
 interface Props {
     index: number,
+    index2: number,
+    index3: number,
 }
 
-const Card = ({index}: Props) => {
-
-    const [emoji, setEmoji] = useState(null);
-    const [emoji1, setEmoji1] = useState(null);
-    const [emoji2, setEmoji2] = useState(null);
-    
-    useEffect(() => {
-        getRequest().then((result: any) => setEmoji(result));
-        getRequest().then((result: any) => setEmoji1(result));
-        getRequest().then((result: any) => setEmoji2(result));
-    }, [])
-
-    console.log(emoji, emoji1, emoji2)
+const Card = ({index, index2, index3}: Props) => {
 
     if(index === -1) {
         return (
             <>
                 <CardStyle>
-                    
                     <h1 className="emoji">❌❌❌</h1>
                     <h1>TIRA LA LEVA PER COMINCIARE.</h1>
                 </CardStyle>
             </>
         )
     } else {
-        if(Simboli[index].x === Simboli[index].y && Simboli[index].y === Simboli[index].z) {
+        if(Simboli1[index] === Simboli2[index2] && Simboli2[index2] === Simboli3[index3]) {
             return (
                 <>
                     <CardStyle>
-                        <h1 className="emoji">{Simboli[index].x} {Simboli[index].y} {Simboli[index].z}</h1>
+                        <h1 className="emoji">{Simboli1[index]} {Simboli2[index2]} {Simboli3[index3]}</h1>
                         <h1> COMBINAZIONE. </h1>
                     </CardStyle>
                 </>
@@ -45,7 +34,7 @@ const Card = ({index}: Props) => {
             return (
                 <>
                     <CardStyle>
-                        <h1 className="emoji">{Simboli[index].x} {Simboli[index].y} {Simboli[index].z}</h1>
+                        <h1 className="emoji">{Simboli1[index]} {Simboli2[index2]} {Simboli3[index3]}</h1>
                         <h1> NON UNA COMBINAZIONE. </h1>
                     </CardStyle>
                 </>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from './Card';
 import styled from 'styled-components';
-//import { db } from '../Firebase';
+// import db  from '../Firebase';
 import { Simboli1 } from '../Simboli';
 import Nav from './Nav';
 
@@ -16,25 +16,25 @@ const Slot = () => {
     let [index8, setIndex8] = useState(-1);
     let [index9, setIndex9] = useState(-1);
 
-    /*let [data, setData] = useState([]);
+    // let [data, setData] = useState([]);
 
-    const ref = db.collection('test');
+    // const ref = db.collection('test');
 
-    const getData = () => {
-      ref.onSnapshot((querySnapshot) => {
-        const items: any = [];
-        querySnapshot.forEach((doc) => {
-          items.push(doc.data());
-        });
-        setData(items);
-      });
-    }
+    // const getData = () => {
+    //   ref.onSnapshot((querySnapshot) => {
+    //     const items: any = [];
+    //     querySnapshot.forEach((doc) => {
+    //       items.push(doc.data());
+    //     });
+    //     setData(items);
+    //   });
+    // }
 
-    useEffect(() => {
-      getData();
-    }, []);
+    // useEffect(() => {
+    //   getData();
+    // }, []);
 
-    console.log(data);*/
+    // console.log(data);
     
   return (
     <>  

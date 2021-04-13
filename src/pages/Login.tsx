@@ -8,7 +8,7 @@ import astolfoimg from '../img/astolfoimg.png'
 const Login = () => {
     const signIn = () => {
         auth.signInWithPopup(provider)
-            .catch((err) => alert(err.message));
+            .catch((err) => console.log(err));
     }
 
     return (

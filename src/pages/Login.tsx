@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { auth, provider } from '../Firebase';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import astolfoimg from '../img/astolfoimg.png'
 
 const Login = () => {
     const signIn = () => {
@@ -11,12 +12,18 @@ const Login = () => {
     }
 
     return (
-        <Sect>
-            <h2>CLICCA SUL BOTTONE PER EFFETTUARE IL LOGIN.</h2>
-            {/*<LoginBtn onClick={signIn}>LOGIN CON GOOGLE.</LoginBtn>*/}
-            <FontAwesomeIcon onClick={signIn} icon={faGoogle} className="google-icon" />
-            <p>Google</p>
-        </Sect>
+        <>
+            <Sect>
+                <h2>CLICCA SUL BOTTONE PER EFFETTUARE IL LOGIN.</h2>
+                {/*<LoginBtn onClick={signIn}>LOGIN CON GOOGLE.</LoginBtn>*/}
+                <FontAwesomeIcon onClick={signIn} icon={faGoogle} className="google-icon" />
+                <p>Google</p>
+            </Sect>
+
+            <Astolfo>
+                <img src={astolfoimg} alt="astolfo" />
+            </Astolfo>
+        </>
     )
 }
 
@@ -74,6 +81,14 @@ const LoginBtn = styled.button`
         color: #fff;
         text-decoration: none;
     }
+`
+
+const Astolfo = styled.div`
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(400%, 55%);
 `
 
 export default Login

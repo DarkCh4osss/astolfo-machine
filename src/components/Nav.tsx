@@ -27,7 +27,8 @@ const Nav = () => {
                                     <div className="testo">
                                         <h6>{user?.displayName}</h6>
                                     </div>
-                                </LogoutInfo>
+                                </LogoutInfo> 
+                                <h5>Punti: 0</h5>
                             </NavLinks>
                         </Container>               
                     </NavBar>
@@ -50,6 +51,7 @@ const Nav = () => {
                                         <h6>{user?.displayName}</h6>
                                     </div>
                                 </LogoutInfo>
+                                <h5>Punti: 0</h5>
                             </NavLinks>
                         </Container>               
                     </NavBar> 

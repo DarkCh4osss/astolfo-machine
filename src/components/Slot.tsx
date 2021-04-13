@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from './Card';
 import styled from 'styled-components';
 //import { db } from '../Firebase';
-import { Simboli1, Simboli2, Simboli3 } from '../Simboli';
+import { Simboli1 } from '../Simboli';
 import Nav from './Nav';
 
 const Slot = () => {
@@ -70,7 +70,7 @@ const SlotMachine = styled.div`
 `
 
 const Genera = styled.button`
-  /* margin-top: 10rem; */
+  margin-top: 3rem;
   padding: 2rem 5rem;
   background: pink;
   border: transparent;

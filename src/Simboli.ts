@@ -2,7 +2,7 @@ import moji from 'randmoji';
 
 export const Simboli1: Array<any> = []
 
-for(let i  = 0; i < 20; i++) {
+for(let i  = 0; i < 4; i++) {
     Simboli1.push(moji(1));
 }
 

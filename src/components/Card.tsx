@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
+import db from '../Firebase';
 import styled from 'styled-components';
 import { Simboli1, Simboli2, Simboli3 } from '../Simboli';
-import moji from 'randmoji';
 
 interface Props {
     index: number,
@@ -10,6 +10,18 @@ interface Props {
 }
 
 const Card = ({index, index2, index3}: Props) => {
+
+    const [points, setPoints] = useState(0);
+
+    const addPoints = (value: number) => {
+        setPoints(points + value);
+    }
+
+    db.collection('points').add({
+        points: points
+    })
+
+    console.log(points);
 
     if(index === -1) {
         return (
